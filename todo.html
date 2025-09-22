@@ -97,23 +97,21 @@
         return;
       }
 
-      // Create list item
+      
       let li = document.createElement("li");
 
-      // Checkbox
+      
       let checkbox = document.createElement("input");
       checkbox.type = "checkbox";
 
-      // Label with task text and chosen time
+    
       let label = document.createElement("label");
       label.innerHTML = taskText + `<span class="task-time">(${taskTime})</span>`;
-
-      // Toggle completed
       checkbox.onchange = function() {
         li.classList.toggle("completed");
       };
 
-      // Delete button
+      
       let deleteBtn = document.createElement("button");
       deleteBtn.textContent = "❌";
       deleteBtn.className = "delete-btn";
@@ -121,17 +119,16 @@
         li.remove();
       };
 
-      // Append elements
+      
       li.appendChild(checkbox);
       li.appendChild(label);
       li.appendChild(deleteBtn);
 
       document.getElementById("taskList").appendChild(li);
-
-      // Clear inputs
       taskInput.value = "";
       timeInput.value = "";
     }
   </script>
 </body>
 </html>
+
